@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #edf4fa;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.user-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-list li {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-list a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.user-list a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.user-detail {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-detail:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-detail h1 {
+  color: #343a40;
+  font-size: 2em;
+}
+
+.user-detail p {
+  color: #6c757d;
+  font-size: 1.1em;
+}
+
+.spinner-border {
+  color: #007bff;
+}

@@ -1,0 +1,48 @@
+@if (isLoading){
+<app-loader [isLoading]="isLoading"></app-loader>
+}
+@if (!isLoading) {
+<div class="container user-list">
+  <input
+    type="text"
+    placeholder="Search by name or username"
+    (input)="onSearch($event)"
+    class="form-control mb-3"
+  />
+  <table class="table">
+    <thead>
+      <tr>
+        <th (click)="sort('name')">Name</th>
+        <th (click)="sort('username')">Username</th>
+        <th (click)="sort('email')">Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (user of paginatedUsers; track $index) {
+      <tr (click)="viewUser(user.id)">
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{user.phone}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <nav>
+    <ul class="pagination">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="previousPage()">Previous</a>
+      </li>
+      @for (page of pages; track $index) {
+      <li class="page-item" [class.active]="currentPage === page">
+        <a class="page-link" (click)="setPage(page)">{{ page }}</a>
+      </li>
+      }
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <a class="page-link" (click)="nextPage()">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+}

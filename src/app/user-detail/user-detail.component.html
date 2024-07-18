@@ -1,0 +1,14 @@
+@if (isLoading){
+<app-loader [isLoading]="isLoading"></app-loader>
+}
+
+@if (user){
+  <div class="container user-detail ">
+  <h2>{{ user.name }}</h2>
+  <p><strong>Username:</strong> {{ user.username }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Phone:</strong> {{ user.phone }}</p>
+  <p><strong>Website:</strong> <a [href]=" user.website">{{ user.website }}</a></p>
+  <button class="btn btn-success" (click)="goBack()">Back</button>
+</div>
+}

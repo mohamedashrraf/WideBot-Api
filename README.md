@@ -1,3 +1,7 @@
+## Notes 
+- sort by click on name, email or username
+- unit testing in userList component
+
 # App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
